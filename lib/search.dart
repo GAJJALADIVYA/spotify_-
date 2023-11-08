@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sportify/all1.dart';
 import 'package:sportify/browse.dart';
+import 'package:sportify/list_browse.dart';
+import 'package:sportify/search_song.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -20,7 +22,7 @@ class Search extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ALL1(),
+                      builder: (context) => SearchSongs(),
                     ),
                   );
                 },
@@ -61,24 +63,23 @@ class Search extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ALL1(),
-                    ),
+              GridView.builder(
+                primary: false,
+                shrinkWrap: true,
+                itemCount: 20,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 20,
+                  //mainAxisSpacing: 10,
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return Browse(
+                    text: textList[index],
+                    image: imageList[index],
+                    col: colList[index],
                   );
                 },
-                child: Row(
-                  children: [
-                    Browse(
-                      text: "Podcasts",
-                      image: "assets/images/all23.jpg",
-                      col: Colors.green,
-                    ),
-                  ],
-                ),
               ),
             ],
           ),
