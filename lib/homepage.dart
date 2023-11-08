@@ -35,110 +35,110 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DPage(),
-                  ),
-                );
-              },
-              child: Container(
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.purple,
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "D",
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  ),
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ),
-                );
-              },
-              child: Container(
-                height: 35,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(20),
-                  color: Colors.grey.withOpacity(0.8),
-                ),
-                child: const Center(
-                  child: Text(
-                    "ALL",
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ALL1(),
-                  ),
-                );
-              },
-              child: Container(
-                height: 35,
-                width: 80,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(20),
-                  color: Colors.grey.withOpacity(0.8),
-                ),
-                child: Center(
-                  child: Text(
-                    "Music",
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Product(),
-                  ),
-                );
-              },
-              child: Container(
-                height: 35,
-                width: 140,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(20),
-                  color: Colors.grey.withOpacity(0.8),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Podcasts & Shows",
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.black,
+      //   title: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     //crossAxisAlignment: CrossAxisAlignment.start,
+      //     children: [
+      //       GestureDetector(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //               builder: (context) => const DPage(),
+      //             ),
+      //           );
+      //         },
+      //         child: Container(
+      //           decoration: const BoxDecoration(
+      //             shape: BoxShape.circle,
+      //             color: Colors.purple,
+      //           ),
+      //           child: const Padding(
+      //             padding: EdgeInsets.all(8.0),
+      //             child: Text(
+      //               "D",
+      //               style: TextStyle(color: Colors.black, fontSize: 20),
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //       GestureDetector(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //               builder: (context) => const HomePage(),
+      //             ),
+      //           );
+      //         },
+      //         child: Container(
+      //           height: 35,
+      //           width: 50,
+      //           decoration: BoxDecoration(
+      //             borderRadius: BorderRadiusDirectional.circular(20),
+      //             color: Colors.grey.withOpacity(0.8),
+      //           ),
+      //           child: const Center(
+      //             child: Text(
+      //               "ALL",
+      //               style: TextStyle(color: Colors.black, fontSize: 15),
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //       GestureDetector(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //               builder: (context) => const ALL1(),
+      //             ),
+      //           );
+      //         },
+      //         child: Container(
+      //           height: 35,
+      //           width: 80,
+      //           decoration: BoxDecoration(
+      //             borderRadius: BorderRadiusDirectional.circular(20),
+      //             color: Colors.grey.withOpacity(0.8),
+      //           ),
+      //           child: Center(
+      //             child: Text(
+      //               "Music",
+      //               style: TextStyle(color: Colors.black, fontSize: 15),
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //       GestureDetector(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //               builder: (context) => const Product(),
+      //             ),
+      //           );
+      //         },
+      //         child: Container(
+      //           height: 35,
+      //           width: 140,
+      //           decoration: BoxDecoration(
+      //             borderRadius: BorderRadiusDirectional.circular(20),
+      //             color: Colors.grey.withOpacity(0.8),
+      //           ),
+      //           child: const Center(
+      //             child: Text(
+      //               "Podcasts & Shows",
+      //               style: TextStyle(color: Colors.black, fontSize: 15),
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: pages[pageIndex],
       bottomNavigationBar: buildMyNavBar(context),
     );
@@ -152,6 +152,7 @@ class _HomePageState extends State<HomePage> {
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
         ),
+        color: Colors.transparent.withOpacity(0.2),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

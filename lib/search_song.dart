@@ -36,50 +36,38 @@ class _SignUpPageState extends State<Song> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Column(
-          children: [
-            TextField(
-              controller: searchController,
-              keyboardType: TextInputType.text,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: "search",
-                hintStyle: TextStyle(color: Colors.white),
-                prefixIcon: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
-                  ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.zero,
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.zero,
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.zero,
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
+        // title: TextField(
+        //   controller: searchController,
+        //   keyboardType: TextInputType.text,
+        //   obscureText: false,
+        //   decoration: InputDecoration(
+        //     hintText: "search",
+        //     hintStyle: TextStyle(color: Colors.white),
+        //     border: OutlineInputBorder(
+        //       borderRadius: BorderRadius.zero,
+        //       borderSide: BorderSide(
+        //         width: 2,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //     enabledBorder: OutlineInputBorder(
+        //       borderRadius: BorderRadius.zero,
+        //       borderSide: BorderSide(
+        //         width: 2,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //     focusedBorder: OutlineInputBorder(
+        //       borderRadius: BorderRadius.zero,
+        //       borderSide: BorderSide(
+        //         width: 2,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }
